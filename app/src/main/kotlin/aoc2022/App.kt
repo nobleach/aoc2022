@@ -3,7 +3,8 @@
  */
 package aoc2022
 
-import aoc2022.Day01
+import aoc2022.*
+import aoc2022.utils.InputReader
 
 fun day01Run() {
     val day01 = Day01()
@@ -12,6 +13,15 @@ fun day01Run() {
     println(day01.getTop3CalorieCount(caloriesList))
 }
 
+fun day02Run() {
+    val day02 = Day02()
+    val input = InputReader.readFileFromResource("day02.txt")
+    println(day02.getTotalScore(input))
+    println(day02.getTotalScoreCorrectly(input))
+}
+
 fun main() {
     day01Run()
+    println("------------------")
+    day02Run()
 }
