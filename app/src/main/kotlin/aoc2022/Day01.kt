@@ -3,6 +3,23 @@ package aoc2022
 import java.io.File
 
 class Day01 {
+    fun readFileFromResource(fileName: String)
+        = javaClass.getResource("/$fileName").readText(Charsets.UTF_8)
+
+    fun findMaxCalories(calorieCounts: String): Int {
+        return calorieCounts.split("\n").fold(mutableListOf(0)) {
+            acc,
+            it -> {
+                if (it.isEmpty()) {
+                    acc.add(0)
+                } else {
+                    acc[acc.lastIndex] = acc[acc.lastIndex] + it.toInt()
+                }
+                acc
+            }
+        }.max()
+    }
+
     fun readFileLineByLine(fileName: String): List<Int> {
         var acc = 0;
         var calories = mutableListOf<Int>()
