@@ -28,5 +28,9 @@ class Day01 {
     fun getMaxCalories(calories: List<Int>): Int {
         return calories.max()
     }
+
+    fun getTop3CalorieCount(calories: List<Int>): Int {
+        return calories.sortedDescending().take(3).sum()
+    }
 }
 

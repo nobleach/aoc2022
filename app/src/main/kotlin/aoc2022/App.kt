@@ -9,6 +9,7 @@ fun day01Run() {
     val day01 = Day01()
     val caloriesList = day01.readFileLineByLine("src/day01.txt")
     println(day01.getMaxCalories(caloriesList))
+    println(day01.getTop3CalorieCount(caloriesList))
 }
 
 fun main() {

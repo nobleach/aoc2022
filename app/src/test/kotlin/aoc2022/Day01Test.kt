@@ -13,4 +13,14 @@ class Day01Test {
 
         assertEquals(expected, actual, "Expected $expected but got $actual")
     }
+
+    @Test fun findTop3ElfCalorieCount() {
+        val input = listOf(100, 200, 300, 400, 500)
+        val day01 = Day01()
+
+        val expected = 1200;
+        val actual = day01.getTop3CalorieCount(input)
+
+        assertEquals(expected, actual, "Expected $expected but got $actual")
+    }
 }
