@@ -24,6 +24,7 @@ fun day03Run() {
     val day03 = Day03()
     val input = InputReader.readFileFromResource("day03.txt")
     println(day03.getPrioritySum(input))
+    println(day03.getBadgeSum(input))
 }
 
 fun main() {

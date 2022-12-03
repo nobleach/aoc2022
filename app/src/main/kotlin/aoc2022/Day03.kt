@@ -16,4 +16,19 @@ class Day03 {
             first.intersect(second).first<Int>()
         }
     }
+
+    fun getBadgeSum(priorityInput: String): Int {
+        val cards = priorityInput.trimMargin().split("\n").chunked(3) {
+            val (first, second, third) = it
+            val symbol = first.toSet().intersect(second.toSet()).intersect(third.toSet()).first()
+
+            if (symbol.isUpperCase()) {
+                symbol.code - 38
+            } else {
+                symbol.code - 96
+            }
+        }
+
+        return cards.sum()
+    }
 }
