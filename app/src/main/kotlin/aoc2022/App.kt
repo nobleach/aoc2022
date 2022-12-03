@@ -20,8 +20,16 @@ fun day02Run() {
     println(day02.getTotalScoreCorrectly(input))
 }
 
+fun day03Run() {
+    val day03 = Day03()
+    val input = InputReader.readFileFromResource("day03.txt")
+    println(day03.getPrioritySum(input))
+}
+
 fun main() {
     day01Run()
     println("------------------")
     day02Run()
+    println("------------------")
+    day03Run()
 }
