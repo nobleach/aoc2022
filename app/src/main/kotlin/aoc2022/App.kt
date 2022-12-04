@@ -27,10 +27,19 @@ fun day03Run() {
     println(day03.getBadgeSum(input))
 }
 
+fun day04Run() {
+    val day04 = Day04()
+    val input = InputReader.readFileFromResource("day04.txt")
+    println(day04.getOverlappingCount(input))
+    println(day04.getIntersectinCount(input))
+}
+
 fun main() {
     day01Run()
     println("------------------")
     day02Run()
     println("------------------")
     day03Run()
+    println("------------------")
+    day04Run()
 }
