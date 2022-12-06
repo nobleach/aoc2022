@@ -36,8 +36,14 @@ class Day05 {
                 }
             }
 
-        println(stacks)
+        // Perform operations
+        moves.split("\n").forEach {
+            val (qty, _, src, _, dest) = it.split(" ").drop(1)
+        }
 
-        return "CMD"
+        return stacks.map {
+            it.last()
+        }
+        .joinToString("")
     }
 }
