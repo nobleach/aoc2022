@@ -9,4 +9,13 @@ class Day06 {
                it == 4
            } + 4
     }
+
+    fun part02(input: String): Int {
+       return input
+           .windowed(14, 1)
+           .map { it.toSet().size }
+           .indexOfFirst {
+               it == 14
+           } + 14
+    }
 }
