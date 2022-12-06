@@ -1,7 +1,5 @@
 package aoc2022
 
-data class Move(val qty: Int, val source: Int, val destination: Int)
-
 class Day05 {
     fun getResultFromMoves(input: String): String {
         val (stackLayout, moves) = input.split("\n\n")
