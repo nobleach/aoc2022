@@ -41,6 +41,11 @@ fun day05Run() {
     println(day05.getResultFromMultiMoves(input))
 }
 
+fun day06Run() {
+    val day06 = Day06()
+    val input = InputReader.readFileFromResource("day06.txt")
+    println(day06.part01(input))
+}
 fun main() {
     day01Run()
     println("------------------")
@@ -51,4 +56,6 @@ fun main() {
     day04Run()
     println("------------------")
     day05Run()
+    println("------------------")
+    day06Run()
 }
