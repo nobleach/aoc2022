@@ -38,6 +38,7 @@ fun day05Run() {
     val day05 = Day05()
     val input = InputReader.readFileFromResource("day05.txt")
     println(day05.getResultFromMoves(input))
+    println(day05.getResultFromMultiMoves(input))
 }
 
 fun main() {
