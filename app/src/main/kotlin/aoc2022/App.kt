@@ -34,6 +34,12 @@ fun day04Run() {
     println(day04.getIntersectinCount(input))
 }
 
+fun day05Run() {
+    val day05 = Day05()
+    val input = InputReader.readFileFromResource("day05.txt")
+    println(day05.getResultFromMoves(input))
+}
+
 fun main() {
     day01Run()
     println("------------------")
@@ -42,4 +48,6 @@ fun main() {
     day03Run()
     println("------------------")
     day04Run()
+    println("------------------")
+    day05Run()
 }

@@ -39,3 +39,8 @@ tasks.named('test') {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
 }
+
+test {
+    // I want to see my printlns
+    testLogging.showStandardStreams true
+}
