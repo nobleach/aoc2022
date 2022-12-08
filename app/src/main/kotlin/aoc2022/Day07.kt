@@ -40,7 +40,6 @@ class Day07 {
                     }
                 }
             }
-        println(root)
         return 3
     }
 
