@@ -11,7 +11,6 @@ class Directory(name: String, val children: MutableList<Node>, parent: Directory
 class Day07 {
     fun part01(input: String): Int {
         val MAX_SIZE = 100_000
-        val dirStack = mutableListOf("/")
         val root = Directory("/", mutableListOf(), null)
         var currentNode = root
 
@@ -22,9 +21,9 @@ class Day07 {
                     when {
                         // It's a command
                         startsWith("$ cd") -> {
-                            with(it.split(" ").last()) {
-                                ".." -> dirStack.dropLast(),
-                                else -> dirStack.add(it.split(" ").last()),
+                            when (it.split(" ").last()) {
+                                ".." -> currentNode = currentNode.parent
+                                else -> currentNode = currentNode.children.find(child.name == it.split(" ").last()),
                             }
                         }
                         startsWith("$ ls") -> println("listing")
@@ -38,6 +37,7 @@ class Day07 {
                             ))
                     }
                 }
+                println(root)
                 return 3
         }
     }
