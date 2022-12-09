@@ -69,7 +69,15 @@ class Day08 {
         val height = matrix.size
         val width = matrix.first().size
 
-
-            return 3
+        return sequence {
+            for (y in 0 until height) {
+                for (x in 0 until width) {
+                    yield(
+                        isVisibleInRow(matrix.get(y), x)
+                        || isVisibleInColumn(matrix, x, x)
+                    )
+                }
+            }
+        }.count { it }
     }
 }
