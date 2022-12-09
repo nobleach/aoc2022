@@ -4,7 +4,7 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 
 class Day07Test {
-    @Test fun itSolvesPart1() {
+    /* @Test fun itSolvesPart1() {
         val input = """
             |$ cd /
             |$ ls
@@ -36,6 +36,6 @@ class Day07Test {
         val actual = day07.part01(input);
 
         assertEquals(expected, actual, "Expected $actual to be $expected!")
-    }
+    } */
 }
 
