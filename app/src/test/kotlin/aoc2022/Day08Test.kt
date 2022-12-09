@@ -67,7 +67,28 @@ class Day08Test {
 
         assertEquals(expected, actual, "Expected $actual to be $expected!")
     }
-    /* @Test fun itSolvesPart1() {
+
+    @Test fun itReturnsTrueIfVisibleInRow() {
+        val input = listOf(2, 3, 5, 7, 9)
+
+        val expected = true
+        val day08 = Day08()
+        val actual = day08.isVisibleInRow(input, 2)
+
+        assertEquals(expected, actual, "Expected $actual to be $expected!")
+    }
+
+    @Test fun itReturnsFalseIfNotVisibleInRow() {
+        val input = listOf(2, 7, 5, 7, 9)
+
+        val expected = false
+        val day08 = Day08()
+        val actual = day08.isVisibleInRow(input, 3)
+
+        assertEquals(expected, actual, "Expected $actual to be $expected!")
+    }
+
+    @Test fun itSolvesPart1() {
         val input = """
             |30373
             |25512
@@ -81,7 +102,7 @@ class Day08Test {
         val actual = day08.part01(input)
 
         assertEquals(expected, actual, "Expected $actual to be $expected!")
-    } */
+    }
     // @Test fun itSolvesPart2() {}
 }
 

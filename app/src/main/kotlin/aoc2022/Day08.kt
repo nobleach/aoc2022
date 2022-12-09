@@ -7,6 +7,23 @@ class Day08 {
     fun isVisibleInRow(row: List<Int>, idx: Int): Boolean {
         if (idx == 0) return true
         if (idx == row.lastIndex) return true
+        val (front, back) = row
+            .withIndex()
+            .groupBy {
+                it.index > idx
+            }
+            .map {
+                it.value.map {
+                    it.value
+                }
+                .toMutableList()
+            }
+
+        val treeHeight = front.removeLast()
+
+        if (front.maxOrNull()!! < treeHeight) return true
+        if (back.maxOrNull()!! < treeHeight) return true
+
         return false
     }
 
