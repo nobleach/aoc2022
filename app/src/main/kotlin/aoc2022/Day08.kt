@@ -1,9 +1,6 @@
 package aoc2022
 
 class Day08 {
-    var curColumn = 1
-    var visibleTrees = 0
-
     fun isVisibleInRow(row: List<Int>, idx: Int): Boolean {
         if (idx == 0) return true
         if (idx == row.lastIndex) return true
@@ -70,11 +67,16 @@ class Day08 {
         val width = matrix.first().size
 
         return sequence {
-            for (y in 0 until height) {
-                for (x in 0 until width) {
+            for (row in 0 until height) {
+                for (col in 0 until width) {
                     yield(
-                        isVisibleInRow(matrix.get(y), x)
-                        || isVisibleInColumn(matrix, x, x)
+                        row == 0
+                        || row == width -1
+                        || col == 0
+                        || col == height -1
+                        || isVisibleInRow(matrix.get(row), col)
+                        || isVisibleInColumn(matrix, col, row)
+
                     )
                 }
             }
