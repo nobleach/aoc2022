@@ -59,6 +59,12 @@ fun day08Run() {
     val input = InputReader.readFileFromResource("day08.txt")
     println(day08.part01(input))
 }
+
+fun day10Run() {
+    val day10 = Day10()
+    val input = InputReader.readFileFromResource("day10.txt")
+    println(day10.part01(input))
+}
 fun main() {
     day01Run()
     println("------------------")
@@ -75,4 +81,6 @@ fun main() {
     day07Run()
     println("------------------")
     day08Run()
+    println("------------------")
+    day10Run()
 }
